@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body>
+
+<h1>Books</h1>
+
+{% for book in books %}
+
+    <p>Title: {{ book.title }}</p>
+    <p>Author: {{ book.author }}</p>
+    <p>Year: {{ book.year }}</p>
+
+    <hr>
+
+{% endfor %}
+
+<a href="/">Back Home</a>
+
+</body>
+</html>
