@@ -1,0 +1,27 @@
+## Database Diagram (DBML)
+
+```dbml
+Table members {
+  id int [pk]
+  full_name varchar
+  email varchar
+  phone varchar
+}
+
+Table books {
+  id int [pk]
+  title varchar
+  author varchar
+  year int
+}
+
+Table borrowed_books {
+  id int [pk]
+  member_id int
+  book_id int
+  borrow_date date
+}
+
+Ref: borrowed_books.member_id > members.id
+Ref: borrowed_books.book_id > books.id
+```
